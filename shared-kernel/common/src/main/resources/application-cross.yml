@@ -1,0 +1,4 @@
+#app:
+#  api-origin: 'http://${API_DOMAIN:api.ems.local}'
+#  management-origin: 'http://${MANAGEMENT_DOMAIN:www.ems.local}'
+#  system-url: 'http://${API_DOMAIN:api.ems.local}/system'

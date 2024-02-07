@@ -1,0 +1,23 @@
+#spring:
+#    datasource:
+#        url: "${DB_URL:jdbc:mysql://localhost:13306/tutorial?useUnicode=yes&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8}"
+#        username: ${DB_USER:tutorial}
+#        password: ${DB_PWD:tutorial}
+#    jpa:
+#        show-sql: false
+#        open-in-view: false
+#        properties:
+#            hibernate.jdbc.batch_size: 50
+#            hibernate.cache.use_query_cache: false
+#            hibernate.cache.use_second_level_cache: false
+#            hibernate.cache.use_structured_entries: false
+#            hibernate.enable_lazy_load_no_trans: true
+#            hibernate.cache.use_minimal_puts: false
+#            hibernate.connection.CharSet: utf8
+#            hibernate.connection.characterEncoding: utf8
+#            hibernate.connection.useUnicode: true
+#            hibernate:
+#                format_sql: true
+#                event:
+#                    merge:
+#                        entity_copy_observer: allow

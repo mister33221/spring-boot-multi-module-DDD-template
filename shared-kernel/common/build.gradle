@@ -1,0 +1,7 @@
+dependencies {
+    api project(':shared-kernel:dddcore')
+
+    implementation 'org.springframework.kafka:spring-kafka'
+
+    compileOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
+}

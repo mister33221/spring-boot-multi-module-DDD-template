@@ -1,0 +1,27 @@
+import com.fasterxml.jackson.dataformat.yaml.YAMLMapper
+
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass.set('com.systex.demo.springboot.SystemApplication')
+}
+
+dependencies {
+    implementation 'aaa.bbb.ccc:sample-for-java:1.1.2'
+}
+
+ext {
+    serverPort = {
+        def yamlFile = project.file('src/main/resources/application.yml')
+        def config = new YAMLMapper().readTree(yamlFile)
+        config.get("server").get("port").toString()
+    }()
+}
+
+jib {
+    container {
+        ports = [serverPort]
+    }
+}

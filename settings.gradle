@@ -1,0 +1,15 @@
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.4.0'
+}
+
+rootProject.name = 'demo'
+
+include 'shared-kernel'
+include 'shared-kernel:dddcore'
+findProject(':shared-kernel:dddcore')?.name = 'dddcore'
+include 'shared-kernel:common'
+findProject(':shared-kernel:common')?.name = 'common'
+
+include 'core-domain'
+include 'core-domain:system'
+findProject(':core-domain:system')?.name = 'system'

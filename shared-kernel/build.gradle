@@ -1,0 +1,21 @@
+allprojects {
+    dependencies {}
+
+    tasks.withType(org.springframework.boot.gradle.tasks.bundling.BootJar) {
+        enabled = false
+    }
+}
+
+subprojects {
+    apply plugin: 'java-library'
+
+    dependencies {
+        api 'com.google.code.findbugs:jsr305:3.0.2'
+
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.1'
+
+        compileOnlyApi 'org.projectlombok:lombok'
+        annotationProcessor 'org.projectlombok:lombok'
+    }
+}
