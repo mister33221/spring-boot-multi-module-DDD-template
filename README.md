@@ -26,8 +26,8 @@ findProject(':{new-module}:{new-project}')?.name = '{new-project}'
 
 ### [maven-repo.gradle](maven-repo.gradle)
 設定拉取的Maven 依賴:
-1. 本地 Maven 庫 `/user/{user}.gradle/caches/modules-2/files-2.1/`
-2. Nexus Maven 私庫 `${NEXUS_F680_GROUP_URL}`
+1. 本地 Maven 庫 `TODO`
+2. Nexus Maven 私庫 `TODO`
 3. Maven 中央庫 (https://repo1.maven.org/maven2/)
 
 ## Build docker image

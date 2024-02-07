@@ -2,7 +2,7 @@ repositories {
     mavenLocal()
     maven {
         name = 'my-maven-group'
-        url = uri(findProperty("NEXUS_F680_GROUP_URL"))
+        url = uri(findProperty("NEXUS_GROUP_URL"))
         credentials {
             username = findProperty("NEXUS_USERNAME")
             password = findProperty("NEXUS_PASSWORD")
